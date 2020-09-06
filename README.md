@@ -6,4 +6,4 @@
 
 Specifically developed for Philippine National Police's Finance Service's perusal.
 
-Credits to the developers of Python and to the modules tkinter and PyPDF2.
+Credits to the developers of Python and to the modules tkinter, PyPDF2 and pyinstaller.
