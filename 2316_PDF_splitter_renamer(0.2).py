@@ -5,7 +5,7 @@ from tkinter import filedialog as fd
 from PyPDF2 import PdfFileReader, PdfFileWriter
 
 def instructions():
-## lines 11 to 13 info more accurate for earlier version
+## line 13 info more accurate for earlier version
     mb.showinfo('Instructions', '''1. Make sure first that the order of the list of filenames
     matches with the page order of the scannned 2316 forms.
 2. If the order of the two does not match, this app won't
