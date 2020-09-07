@@ -1,5 +1,5 @@
-# PDF Auto Split + Rename
-.py script for pdf splitting and page-by-page renaming
+# PDF Auto Split + (batch) Rename
+.py script for pdf auto splitting and auto page-by-page renaming
 
 ---Coded using Python 3.7 
 
