@@ -75,7 +75,7 @@ root = tk.Tk()    ##('2316 PDF Splitter_Renamer', '2316 PDF Splitter_Renamer')
 root.iconbitmap('app.ico') ##there could be a problem here after pyinstaller compilation
 root.title('2316 PDF Splitter_Renamer')
 root.geometry("355x90")
-b1 = tk.Button(text='(1) ReadMe', command=instructions).pack(fill=tk.X)
+b1 = tk.Button(text='(1) ReadMe', command=instructions).pack(fill=tk.X) ## assigning b(n) for buttons intended for possibly binding values generated from buttons for future dev versions 
 b2 = tk.Button(text='(2) Open&Extract_pdf_pages', command=callback_fd_extract_rename).pack(fill=tk.X)  ##or tk.BROWSE???? create another button within callback_fd...() to determine directory where pages will be extracted
 ##b3 = tk.Button(text='(3) Get Filenames', command=get_list).pack(fill=tk.X)  ##tk.Entry( perhaps??? or tk.StringVar(    ...... create another mb.showinfo or another canvas?? where filenames array can be shown or pasted into...
 ##tk.Button(text='(4) Split *.pdf and rename', command=
