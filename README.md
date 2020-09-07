@@ -8,7 +8,7 @@ Specifically developed for the later part of Philippine National Police's Financ
 
 Coding focused only on extracting or copying every page from a pdf doc(read-access only) and subsequently renaming each copied page with the use of a list of strings appended from either manual input() or multiple text input() from clipboard.
 
-Since this is just my very first attempt at having a GUI for the office automation problem-to-code solution I have been able to come up with so far, any comment, suggestions, contribution, expert advice is welcome.
+Since this is just my very first attempt at having a GUI for the office-automation-problem-to-code solution I have been able to come up with so far, any comment, suggestions, contribution, expert advice is welcome.
 
 I have no programming background other than basic Python and I'm still getting my head around injecting classes into my scripts, so please be nice. :)
 
