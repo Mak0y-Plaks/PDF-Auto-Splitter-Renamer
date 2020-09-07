@@ -4,7 +4,7 @@
 ---Coded using Python 3.7 
 
 
-Specifically developed for the later part of Philippine National Police's Finance Service's approach to offline mass archiving of scanned individual tax forms filed by personnel collected separately and bundled mainly by provincial/city/regional headquarter Finance Sergeants.
+Specifically developed for the later part of Philippine National Police's Finance Service's approach to offline mass archiving of scanned individual tax forms filed by personnel collected separately, then sorted, bundled and submitted mainly by provincial/city/regional headquarter Finance Sergeants.
 
 Coding was focused only on extracting or copying every page from a (read-access only) pdf doc and subsequently renaming each copied page with the use of a list of strings appended from either manual CLI input() or multiple text input() from clipboard.
 
