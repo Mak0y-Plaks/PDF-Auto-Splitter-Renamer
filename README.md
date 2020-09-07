@@ -10,6 +10,6 @@ Coding was focused only on extracting or copying every page from a (read-access 
 
 Since this is just my very first attempt at having a GUI for the office-automation-problem-to-code solution I have been able to come up with so far, any comment, suggestions, contribution, expert advice is welcome.
 
-I have no programming background other than basic Python and I'm still getting my head around injecting class functions into my scripts, so please be nice. :)
+I have no programming background other than basic Python and I'm still getting my head around adding class functions into my scripts, so please be nice. :)
 
 Credits to the developers of Python and lib/modules tkinter, PyPDF2 and pyinstaller.
