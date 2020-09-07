@@ -5,11 +5,12 @@ from tkinter import filedialog as fd
 from PyPDF2 import PdfFileReader, PdfFileWriter
 
 def instructions():
+## lines 11 to 13 info more accurate for earlier version
     mb.showinfo('Instructions', '''1. Make sure first that the order of the list of filenames
     matches with the page order of the scannned 2316 forms.
 2. If the order of the two does not match, this app won't
     completely accomplish its task or may return an error and
-    exit abruptly without warning.
+    exit abruptly without warning.        
 3. In case of duplicate/multiple copies in a batch of scanned
     forms, make sure to provide each copy a different/slightly
     different filename. Giving two or more files the same
@@ -30,7 +31,7 @@ def get_list():
 
     return filenames
 
-def callback_fd_extract_rename():
+def callback_fd_extract_rename():  ## 'extract' may not be a totally accurate label for this function
     pdf_file = fd.askopenfile(mode='rb', title='Select *.pdf file for splitting and renaming...')
     pdf_file_dir = pdf_file.name
     while pdf_file_dir[-1] != '/':
@@ -75,7 +76,7 @@ root.iconbitmap('app.ico') ##there could be a problem here after pyinstaller com
 root.title('2316 PDF Splitter_Renamer')
 root.geometry("355x90")
 b1 = tk.Button(text='(1) ReadMe', command=instructions).pack(fill=tk.X)
-b2 = tk.Button(text='(2) Open&Extract_pdf_pages', command=callback_fd_extract_rename).pack(fill=tk.X)  ##or tk.BROWSE???? create another button within callback_fd() to determine directory where pages will be extracted
+b2 = tk.Button(text='(2) Open&Extract_pdf_pages', command=callback_fd_extract_rename).pack(fill=tk.X)  ##or tk.BROWSE???? create another button within callback_fd...() to determine directory where pages will be extracted
 ##b3 = tk.Button(text='(3) Get Filenames', command=get_list).pack(fill=tk.X)  ##tk.Entry( perhaps??? or tk.StringVar(    ...... create another mb.showinfo or another canvas?? where filenames array can be shown or pasted into...
 ##tk.Button(text='(4) Split *.pdf and rename', command=
 b3 = tk.Button(text='Quit', command=callback_end).pack(fill=tk.X)
