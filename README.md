@@ -1,4 +1,4 @@
-# PDF Auto Split + (batch) Rename
+# PDF Auto Splitter + Renamer
 .py script for pdf auto splitting and auto page-by-page renaming
 
 ---Coded using Python 3.7 with PyPDF2 and package-freezed by PyInstaller as a stand-alone executable for Windows
