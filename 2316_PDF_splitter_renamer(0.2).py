@@ -3,9 +3,10 @@ import tkinter as tk
 from tkinter import messagebox as mb
 from tkinter import filedialog as fd
 from PyPDF2 import PdfFileReader, PdfFileWriter
+from datetime import datetime
 
 def instructions():
-## line 13 info more accurate for earlier version
+## lines 13-14 info more accurate for earlier version
     mb.showinfo('Instructions', '''1. Make sure first that the order of the list of filenames
     matches with the page order of the scannned 2316 forms.
 2. If the order of the two does not match, this app won't
@@ -16,7 +17,7 @@ def instructions():
     different filename. Giving two or more files the same
     filename in the same directory will also cause the app to
     halt and suddenly exit.
-4. Proceed and click the button "Open&Extract_pdf_pages"
+4. Proceed and click the button "Open_pdf&Extract_pages"
     to open the *.pdf file for splitting and renaming.''')
 
 def get_list():
@@ -72,12 +73,21 @@ def callback_end():
 
 root = tk.Tk()    ##('2316 PDF Splitter_Renamer', '2316 PDF Splitter_Renamer')
 ##root.withdraw()
+C = tk.Canvas(root, bg="green")   ##tk.Canvas(top, bg="green", height=250, width=300) green bg appears when background_label.place for y is altered
+filename = tk.PhotoImage(file = "bg.gif")
+background_label = tk.Label(root, image=filename)
+background_label.place(x=0, y=0, relwidth=1, relheight=1)
+
 root.iconbitmap('app.ico') ##there could be a problem here after pyinstaller compilation
 root.title('2316 PDF Splitter_Renamer')
-root.geometry("355x90")
-b1 = tk.Button(text='(1) ReadMe', command=instructions).pack(fill=tk.X) ## assigning b(n) for buttons intended for possibly binding values generated from buttons for future dev versions 
-b2 = tk.Button(text='(2) Open&Extract_pdf_pages', command=callback_fd_extract_rename).pack(fill=tk.X)  ##or tk.BROWSE???? create another button within callback_fd...() to determine directory where pages will be extracted
+root.geometry("355x250")
+##if datetime.now() < datetime(2020, 12, 31) and datetime.now() > datetime(2020, 9, 1):
+b1 = tk.Button(text='(1) ReadMe', command=instructions).pack() ##pack(fill=tk.X) ## assigning b(n) for buttons intended for possibly binding values generated from buttons for future dev versions 
+b2 = tk.Button(text='(2) Open_pdf&Extract_pages', command=callback_fd_extract_rename).pack() ##pack(fill=tk.X)  ##or tk.BROWSE???? create another button within callback_fd...() to determine directory where pages will be extracted
 ##b3 = tk.Button(text='(3) Get Filenames', command=get_list).pack(fill=tk.X)  ##tk.Entry( perhaps??? or tk.StringVar(    ...... create another mb.showinfo or another canvas?? where filenames array can be shown or pasted into...
 ##tk.Button(text='(4) Split *.pdf and rename', command=
-b3 = tk.Button(text='Quit', command=callback_end).pack(fill=tk.X)
+b3 = tk.Button(text='Quit', command=callback_end).pack() ##pack(fill=tk.X)
+root.lift()
+root.attributes('-topmost',True)
+root.after_idle(root.attributes,'-topmost',False)
 tk.mainloop()
