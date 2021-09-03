@@ -1,7 +1,7 @@
 # PDF Auto Splitter + Renamer
 .py script for pdf auto splitting and auto page-by-page renaming
 
----Coded using Python 3.7 with PyPDF2 and package-freezed by PyInstaller as a stand-alone executable for Windows
+---Coded using Python 3.7 with PyPDF2 and package-freezed using PyInstaller as a stand-alone executable for the Windows 10/8 environment.
 
 Specifically developed for automating the later part of Philippine National Police's Finance Service's approach to offline mass archiving of individual tax forms (BIR Form 2316), which were distributed for signing then collected separately, sorted, bundled and submitted mainly by provincial/city/regional headquarter Finance Sergeants.
 
