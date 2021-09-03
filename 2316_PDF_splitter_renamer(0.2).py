@@ -67,7 +67,7 @@ def callback_end():
     Leyte, Philippines
 
     For queries or feedback, contact details:
-    email: rfsopro8@gmail.com
+    email: rfs_r08@pnp.gov.ph
     Office phone no.: (6353) 832-4373""")
     
 
